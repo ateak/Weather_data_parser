@@ -39,21 +39,14 @@ public class Parser {
             if (isMorning) {
                 iterationCount = 3;
             }
-            for (int i = 0; i < iterationCount; i++) {
-                Element valueLine = values.get(index + i);
-                for (Element td : valueLine.select("td")) {
-                    System.out.println(td.text() + "   ");
-                }
-                System.out.println();
+        }
+
+        for (int i = 0; i < iterationCount; i++) {
+            Element valueLine = values.get(index + i);
+            for (Element td : valueLine.select("td")) {
+                System.out.println(td.text() + "   ");
             }
-        } else {
-            for (int i = 0; i < iterationCount; i++) {
-                Element valueLine = values.get(index);
-                for (Element td : valueLine.select("td")) {
-                    System.out.println(td.text() + "   ");
-                }
-                System.out.println();
-            }
+            System.out.println();
         }
         return iterationCount;
     }
